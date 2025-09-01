@@ -1,25 +1,21 @@
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
 from azure.ai.agents.models import ListSortOrder
-import csv
 import os
-
-# Initialize the AIProjectClient with Azure credentials and endpoint
+import csv
 project = AIProjectClient(
     credential=DefaultAzureCredential(),
     endpoint="https://azureaifoundarysqlbits2025.services.ai.azure.com/api/projects/firstProject")
 
-# Get the agent by its ID
-agent = project.agents.get_agent("asst_wCvXV5ypMn9HmdIFKCoEE4bw")
+agent = project.agents.get_agent("asst_4fJGY1pB8KPoDZvrrFabiN0r")
 
-# Create a new thread for the conversation
 thread = project.agents.threads.create()
 print(f"Created thread, ID: {thread.id}")
 
-# Prompt the user for input to send to the agent
+
+# Get user prompt at runtime
 user_prompt = input("Enter your prompt for the agent: ")
 
-# Create a message in the thread with the user's input
 message = project.agents.messages.create(
     thread_id=thread.id,
     role="user",
