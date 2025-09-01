@@ -1,0 +1,13 @@
+role,message
+user,show mw sales data
+assistant,"Here is the sales data from the Sales warehouse table:
+
+| sale_id | product_name | quantity | price  | sale_date             |
+|---------|--------------|----------|--------|-----------------------|
+| 1       | Laptop       | 2        | 1200   | 6/1/2025 12:00:00 AM  |
+| 2       | Smartphone   | 5        | 699.99 | 6/5/2025 12:00:00 AM  |
+| 3       | Headphones   | 10       | 89.5   | 6/10/2025 12:00:00 AM |
+| 4       | Monitor      | 3        | 250    | 6/15/2025 12:00:00 AM |
+| 5       | Keyboard     | 7        | 45     | 6/18/2025 12:00:00 AM |
+
+If you need more specific details or analysis, please let me know!【3:0†source】"
